@@ -5,7 +5,7 @@
  * @s: is the sequence of hash to be hashed
  * @len: is the number of bytes to hash in s
  * @digest: is the result buffer
- * Returns: the result digest or null on failure
+ * Return: the result digest or null on failure
  */
 uint8_t *sha256(int8_t const *s, size_t len,
 				uint8_t digest[SHA256_DIGEST_LENGTH])
