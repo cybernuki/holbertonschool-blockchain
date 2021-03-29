@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "hblk_crypto.h": "c",
-        "sha.h": "c"
+        "sha.h": "c",
+        "ec.h": "c",
+        "evp.h": "c"
     }
 }
