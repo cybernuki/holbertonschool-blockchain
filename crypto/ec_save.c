@@ -4,6 +4,7 @@
  * ec_save - ec_save save the ec key to a file
  * @key: the key to be saved
  * @folder: name of the folder
+ * Return: saved bytes
  */
 int ec_save(EC_KEY *key, char const *folder)
 {
