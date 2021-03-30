@@ -91,10 +91,9 @@ typedef struct block_s
 } block_t;
 
 /* GENESIS BLOCK - first block in the chain */
-#define GENESIS_BLOCK                                                          \
+#define GENESIS_BLOCK                                                         \
 	{                                                                          \
 		{                                                                      \
-			/* info */                                                         \
 			0 /* index */,                                                     \
 			0,			/* difficulty */                                       \
 			1537578000, /* timestamp */                                        \
@@ -102,7 +101,6 @@ typedef struct block_s
 			{0}			/* prev_hash */                                        \
 		},                                                                     \
 			{                                                                  \
-				/* data */                                                     \
 				"Holberton School", /* buffer */                               \
 				16					/* len */                                  \
 			},                                                                 \
