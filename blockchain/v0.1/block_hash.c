@@ -7,10 +7,10 @@
  * Return: pointer to buffer
  */
 uint8_t *block_hash(block_t const *block,
-                    uint8_t hash_buf[SHA256_DIGEST_LENGTH])
+					uint8_t hash_buf[SHA256_DIGEST_LENGTH])
 {
-    size_t len = sizeof(block->info) + block->data.len;
+	size_t len = sizeof(block->info) + block->data.len;
 
-    sha256((int8_t const *)&(block->info), len, hash_buf);
-    return (hash_buf);
+	sha256((int8_t const *)&(block->info), len, hash_buf);
+	return (hash_buf);
 }
