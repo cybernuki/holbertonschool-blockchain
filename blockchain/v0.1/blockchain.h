@@ -118,5 +118,6 @@ uint8_t *block_hash(block_t const *block,
 int blockchain_serialize(blockchain_t const *blockchain, char const *path);
 llist_t *deserialize_blocks(int fd, uint32_t size, uint8_t endianness);
 blockchain_t *blockchain_deserialize(char const *path);
+int block_is_valid(block_t const *block, block_t const *prev_block);
 
 #endif
