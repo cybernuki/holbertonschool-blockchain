@@ -21,7 +21,7 @@
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
 
 #define HBLK_MAGIC "HBLK"
-#define HBLK_VERSION "0.2"
+#define HBLK_VERSION "0.3"
 #define BLOCK_GENERATION_INTERVAL 1
 #define DIFFICULTY_ADJUSTMENT_INTERVAL 5
 
