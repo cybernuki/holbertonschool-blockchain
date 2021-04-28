@@ -44,7 +44,8 @@ uint8_t *transaction_hash(transaction_t const *transaction,
 
 	if (!transaction)
 		return (NULL);
-	len = SHA256_DIGEST_LENGTH * 3 * llist_size(transaction->inputs) + SHA256_DIGEST_LENGTH * llist_size(transaction->outputs);
+	len = SHA256_DIGEST_LENGTH * 3 * llist_size(transaction->inputs);
+	len = len + SHA256_DIGEST_LENGTH * llist_size(transaction->outputs);
 	_buf = buf = calloc(1, len);
 	if (!_buf)
 		return (NULL);
