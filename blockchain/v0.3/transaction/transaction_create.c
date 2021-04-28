@@ -65,7 +65,9 @@ transaction_t *populate_tx(EC_KEY const *sender, visitor_t *visitor,
 	tx->inputs = llist_create(MT_SUPPORT_FALSE);
 	tx->outputs = llist_create(MT_SUPPORT_FALSE);
 	to_receiver = tx_out_create(visitor->amount, receiver_pub);
-	to_sender = visitor->total_amount > visitor->amount ? tx_out_create(visitor->total_amount - visitor->amount, sender_pub) : 0;
+	to_sender = visitor->total_amount > visitor->amount
+					? tx_out_create(visitor->total_amount - visitor->amount, sender_pub)
+					: 0;
 
 	if (!tx->inputs || !tx->outputs || !to_receiver ||
 		(visitor->total_amount > visitor->amount && !to_sender))
