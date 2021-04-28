@@ -1,10 +1,14 @@
 #include "blockchain.h"
 
 /**
- * block_destroy - block_destroy frees a block
- * @block: pointer to block
+ * blockchain_destroy - frees an entire chain of blocks
+ * @blockchain: pointer to chain struct
  */
-void block_destroy(block_t *block)
+void blockchain_destroy(blockchain_t *blockchain)
 {
-    free(block);
+	if (!blockchain)
+		return;
+	llist_destroy(blockchain->chain, 1, (void (*)(llist_node_t))block_destroy);
+	llist_destroy(blockchain->unspent, 1, free);
+	free(blockchain);
 }
